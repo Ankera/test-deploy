@@ -10,3 +10,9 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PWD }}
+          script_stop: true
+          script: | 
+            ls -al
+            touch test.xt
+            echo "hello imooc"
+            cat test.xt
