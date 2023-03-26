@@ -11,7 +11,10 @@ jobs:
           password: ${{ secrets.SSH_PWD }}
           script_stop: true
           script: |
+            cd /data/www/html
             ls -al
-            touch test.txt
-            echo "hello imooc" >> /test/test.txt
-            cat test.xt
+            rm -rf test-deploy
+            git clone git@github.com:Ankera/test-deploy.git -b ${{ github.ref_name }}
+            cd test-deploy
+            npm install
+            npm run build
