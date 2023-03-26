@@ -1,4 +1,3 @@
-name: Deploy
 name: Deploy test-deploy
 on: [push]
 jobs: 
