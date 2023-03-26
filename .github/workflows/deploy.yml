@@ -13,5 +13,5 @@ jobs:
           script: |
             ls -al
             touch test.txt
-            echo "hello imooc" >> test.txt
+            echo "hello imooc" >> /test/test.txt
             cat test.xt
