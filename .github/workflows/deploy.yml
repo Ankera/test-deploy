@@ -1,16 +1,16 @@
 name: Deploy test-deploy
 on: [push]
-jobs: 
+jobs:
   Deploy:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: appleboy/ssh-action@v0.1.8
-         with:
+        with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PWD }}
           script_stop: true
-          script: | 
+          script: |
             ls -al
             touch test.xt
             echo "hello imooc"
