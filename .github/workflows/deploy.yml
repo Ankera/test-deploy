@@ -12,6 +12,6 @@ jobs:
           script_stop: true
           script: |
             ls -al
-            touch test.xt
-            echo "hello imooc"
+            touch test.txt
+            echo "hello imooc" >> test.txt
             cat test.xt
