@@ -1,0 +1,12 @@
+name: Deploy
+name: Deploy test-deploy
+on: [push]
+jobs: 
+  Deploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: appleboy/ssh-action@v0.1.8
+         with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PWD }}
